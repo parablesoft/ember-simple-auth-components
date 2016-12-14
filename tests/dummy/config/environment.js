@@ -30,6 +30,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.host = "http://localhost:3000";
   }
 
   if (environment === 'test') {
@@ -52,8 +53,8 @@ module.exports = function(environment) {
   ENV['ember-simple-auth'] = { 
     authenticationRoute: 'login',  
     authorizer: 'simple-auth-authorizer:devise',
-    routeAfterAuthentication: 'dashboard',
-    routeIfAlreadyAuthenticated: 'dashboard',
+    routeAfterAuthentication: 'admin',
+    routeIfAlreadyAuthenticated: 'admin',
     crossOriginWhitelist: [ENV.APP.host],
   };
   ENV['simple-auth-devise'] = { 

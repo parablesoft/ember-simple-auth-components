@@ -1,0 +1,5 @@
+{{#unless isLoggingIn}}
+  {{login-form onAuthenticate=(action "authenticate")}}
+{{else}}
+  Logging In
+{{/unless}}

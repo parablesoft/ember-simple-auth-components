@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="col-mn-12">
+      <h1>Admin Page - Must Be Authenticated</h1>
+      Logged In as {{session.currentUser.role}}
+      {{link-to-logout onInvalidateSession=(action "logout")}}
+    </div>
+  </div>
+</div>

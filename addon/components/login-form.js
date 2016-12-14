@@ -12,4 +12,9 @@ export default Component.extend({
   forgotPasswordRoute: computed(function(){
     return Configuration.forgotPasswordRoute;
   }),
+  actions:{
+    authenticate(){
+      this.attrs.onAuthenticate();
+    }
+  }
 });

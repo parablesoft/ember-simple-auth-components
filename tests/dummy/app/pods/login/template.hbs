@@ -1,0 +1,8 @@
+{{#unless isLoggingIn}}
+  {{login-form 
+  	identification=identification
+	password=password
+  	onAuthenticate=(action "authenticate")}}
+{{else}}
+<h1 class="text-center">{{fa-icon "spinner" spin=true}} Logging In</h1>
+{{/unless}}

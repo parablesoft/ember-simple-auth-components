@@ -1,0 +1,37 @@
+<div class="row" id="login_container" >
+  <div class="col-md-4 col-md-offset-4">
+    <div class="well white_well">
+      <div class="sign_in_title text-center">
+	<h3 class="forgot_password_title">Reset your password</h3>
+	<p>Enter a new password below. <strong style="text-decoration:underline;">Please make sure it is at least 8 characters long.</strong></p>
+      </div>
+      {{#if errorMessage}}
+      <div class="col-md-12 text-center login_error_message">
+	<h4><i class="fa fa-exclamation-triangle"> {{errorMessage}}</i></h4>
+      </div>
+      {{/if}}
+      <form {{action 'resetPassword' on='submit'}}>
+	<div class="form-group">
+	  <label style="font-weight:normal;color:#333;text-shadow:1px 1px #eee;" for="newPassword">New Password</label>
+	  <div class="controls">
+	    {{textfield-auto-focus type="password" class="form-control" id="newPassword" value=password placeholder="Enter your new password"}}
+	  </div>
+	</div>
+	<div class="sign_in_container">
+	  <button class="btn btn-success">Reset my password</button>
+	</div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="sign-in-bottom-link">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <p class="text-center">
+      <small>
+	<strong>Never mind:</strong> {{#link-to "login"}}Take me back to the login page{{/link-to}}
+      </small>
+      </p>
+    </div>
+  </div>
+</div>

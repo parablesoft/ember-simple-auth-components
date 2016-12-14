@@ -1,8 +1,9 @@
 import Ember from "ember";
 const { getWithDefault,typeOf } = Ember;
 const DEFAULTS = {
-  logo:                     '/assets/images/logo.png',
-  forgotPasswordRoute:         'forgot_password'
+  logo: '/assets/images/logo.png',
+  forgotPasswordRoute: 'forgot_password',
+
 };
 export default{
   logo: DEFAULTS.logo,

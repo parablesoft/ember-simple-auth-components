@@ -1,0 +1,7 @@
+<a href="#" {{action "invalidateSession"}} class="">
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    <span>Logout</span>
+  {{/if}}
+</a>
