@@ -1,0 +1,47 @@
+{{#unless isLoggingIn}}
+<div class="row" id="login_container" >
+  <div class="col-md-4 col-md-offset-4">
+    <div class="well white_well ">
+      <div class="sign_in_title text-center">
+	<h3 class="login_title">Sign in </h3>
+	<img src="{{logo}}" />
+      </div>
+      {{#if errorMessage}}
+      <div class="col-md-12 text-center login_error_message">
+	<h4><i class="fa fa-exclamation-triangle"> {{errorMessage}}</i></h4>
+      </div>
+      {{/if}}
+      <form {{action 'authenticate' on='submit'}}>
+	<div class="form-group">
+	  <label for="identification">Email</label>
+	  <div class="controls">
+	    {{textfield-auto-focus autoFocus=true id="identification" class="form-control" value=identification placeholder="Enter your email address"}}
+	  </div>
+	</div>
+	<div class="form-group">
+	  <label for="password">Password</label>
+	  <div class="controls">
+	    {{input type="password" class="form-control" placeholder="Enter your password" id="password" value=password}}
+	  </div>
+	</div>
+	<div class="sign_in_container">
+	  <button class="btn btn-success">Sign in</button>
+	</div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="sign-in-bottom-link">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <p class="text-center">
+      <small>
+	<strong>Help:</strong> {{link-to "I can't sign in or I forgot my username/password" "forgot_password"}}
+      </small>
+      </p>
+    </div>
+  </div>
+</div>
+{{else}}
+Logging In
+{{/unless}}

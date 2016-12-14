@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dummy',
     environment: environment,
+    podModulePrefix:'dummy/pods',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -19,6 +20,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV["ember-simple-auth-components"] = {
+    // logo: "/images/logo.jpg",
+    // forgotPasswordRoute: "foo-bar",
+  };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -43,5 +48,16 @@ module.exports = function(environment) {
 
   }
 
-  return ENV;
+
+  ENV['ember-simple-auth'] = { 
+    authenticationRoute: 'login',  
+    authorizer: 'simple-auth-authorizer:devise',
+    routeAfterAuthentication: 'dashboard',
+    routeIfAlreadyAuthenticated: 'dashboard',
+    crossOriginWhitelist: [ENV.APP.host],
+  };
+  ENV['simple-auth-devise'] = { 
+    serverTokenEndpoint : ENV.APP.host + '/users/sign_in'
+   };
+ return ENV;
 };

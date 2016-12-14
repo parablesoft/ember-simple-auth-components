@@ -6,6 +6,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+  this.route('forgot_password');
+  this.route('reset_password', {path: 'reset_password/:token'});
+  this.route('users',function(){
+    this.route('confirmation', {path: 'confirmation/:token_id'});
+  });
 });
 
 export default Router;
