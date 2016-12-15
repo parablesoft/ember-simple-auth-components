@@ -1,6 +1,6 @@
 {
   "name": "ember-simple-auth-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Installs ember-simple-auth and configures it with templates.",
   "directories": {
     "doc": "doc",

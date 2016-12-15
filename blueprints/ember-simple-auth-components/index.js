@@ -46,7 +46,8 @@ module.exports = {
       },
       // overriding to always returning module name despite being a pod
       __path__: function (options) {
-	return options.pod ? options.podPath : "";
+	return "pods";
+	// return options.pod ? options.podPath : "";
       }
     }
   }
