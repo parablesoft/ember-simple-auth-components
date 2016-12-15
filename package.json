@@ -1,7 +1,7 @@
 {
   "name": "ember-simple-auth-components",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Installs ember-simple-auth and configures it with templates.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,13 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/parablesoft/ember-simple-auth-components",
+  "issues": "https://github.com/parablesoft/ember-simple-auth-components/issues",
+  "homepage": "https://github.com/parablesoft/ember-simple-auth-components",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Vic Amuso <vic@parablesoft.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
