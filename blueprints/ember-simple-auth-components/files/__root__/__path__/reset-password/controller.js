@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Config from "<%=configPackageName%>/config/environment";
+import Config from "ember-simple-auth/configuration";
 import Notifyable from "ember-ui-helpers/mixins/notifyable";
 
 const {$,get,Controller} = Ember;
@@ -9,7 +9,7 @@ export default Controller.extend(Notifyable,{
   token: alias("model.token"),
   actions:{
     resetPassword(){
-      let host = Config.APP.host;
+      let host = Config.host;
       let data = {reset_password_token: get(this,"token"), password: get(this,"password")};
       $.ajax({
 	url: `${host}/users/password/`,

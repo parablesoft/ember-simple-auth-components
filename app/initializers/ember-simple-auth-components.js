@@ -6,6 +6,7 @@ export default {
   name:       'ember-simple-auth-components',
   initialize: function(registry) {
     const config   = ENV['ember-simple-auth-components'] || {};
+    config.host = ENV.APP.host;
     Configuration.load(config);
   }
 };

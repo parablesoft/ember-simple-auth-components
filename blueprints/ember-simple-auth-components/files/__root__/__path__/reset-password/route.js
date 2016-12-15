@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Config from "<%=configPackageName%>/config/environment";
+import Config from "ember-simple-auth/configuration";
 import Notifyable from "ember-ui-helpers/mixins/notifyable";
 
 const {$,get,Route} = Ember;
@@ -7,7 +7,7 @@ const {$,get,Route} = Ember;
 export default Route.extend(Notifyable,{
   model(params){
     let token = params.token;
-    let host = Config.APP.host;
+    let host = Config.host;
     return $.get(`${host}/users/password/edit?token=${token}`)
     .success((result)=>{
       if(!result.valid){

@@ -26,19 +26,15 @@ const environmentJsRegExPattern = "$1" + EOL +
 /*jshint node:true*/
 module.exports = {
   description: '',
-  locals: function(options) {
-    let configPackageName = options.dummy ? "dummy" : options.dasherizedPackageName;
-    console.dir(configPackageName);
-    return { 
-      configPackageName: configPackageName, 
-    };
-  },
   normalizeEntityName: function() {},
   afterInstall: function(options) {
-    // this.addAddonToProject('ember-ui-helpers', '');
     let args = {dummy: options.dummy, root: options.project.root};
     updateEnvironmentJs(args);
     updateRouter(args);
+    this.addAddonToProject("ember-bootstrap","");
+    this.addAddonToProject("ember-font-awesome","");
+    this.addAddonToProject("ember-simple-auth","");
+    return this.addAddonToProject('ember-ui-helpers', '');
   },
   fileMapTokens: function () {
     return {
@@ -50,12 +46,7 @@ module.exports = {
       },
       // overriding to always returning module name despite being a pod
       __path__: function (options) {
-	if (options.inDummy) {
-	  return "pods";
-	}
-	else{
-	  return options.dasherizedModuleName;
-	}
+	return options.pod ? options.podPath : "";
       }
     }
   }
