@@ -1,26 +1,12 @@
 # Ember-simple-auth-components
 
-This README outlines the details of collaborating on this Ember addon.
+This addon provides the following to work in sync with ember-simple-auth:
+
+* Forms: Login,Forgot Password, Password Reset
+* Logout Button Component
+* LogoutController mixin, which is to be used on the controller where the Logout Button component is used. 
+* Enhanced session service which uses a my-account model to determine the user's role
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+* ember-install ember-simple-auth-generators

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Config from "<%=dasherizedPackageName%>/config/environment";
+import Config from "<%=configPackageName%>/config/environment";
 import Notifyable from "ember-ui-helpers/mixins/notifyable";
 
 const {$,get,Controller} = Ember;
