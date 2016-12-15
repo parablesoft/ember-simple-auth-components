@@ -3,7 +3,10 @@
     <div class="col-mn-12">
       <h1>Admin Page - Must Be Authenticated</h1>
       Logged In as {{session.currentUser.role}}
-      {{link-to-logout onInvalidateSession=(action "logout")}}
+      <hr>
+      {{link-to-logout onInvalidateSession=(action "logout")}} | {{link-to "Admin Home" "admin"}} | {{link-to "Settings" "admin.settings"}}
+      <hr>
+      {{outlet}}
     </div>
   </div>
 </div>

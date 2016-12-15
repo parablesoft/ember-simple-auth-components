@@ -12,7 +12,9 @@ Router.map(function() {
   this.route('users',function(){
     this.route('confirmation', {path: 'confirmation/:token_id'});
   });
-  this.route('admin');
+  this.route('admin', function() {
+    this.route('settings');
+  });
 });
 
 export default Router;
