@@ -35,10 +35,10 @@ module.exports = {
   },
   normalizeEntityName: function() {},
   afterInstall: function(options) {
-    this.addAddonToProject('ember-ui-helpers', '');
+    // this.addAddonToProject('ember-ui-helpers', '');
     let args = {dummy: options.dummy, root: options.project.root};
-    // updateEnvironmentJs(args);
-    // updateRouter(args);
+    updateEnvironmentJs(args);
+    updateRouter(args);
   },
   fileMapTokens: function () {
     return {
