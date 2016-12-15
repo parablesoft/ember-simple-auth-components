@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Config from "ember-simple-auth/configuration";
+import Config from 'ember-simple-auth-components/configuration';
 import Notifyable from "ember-ui-helpers/mixins/notifyable";
 
 const {$,get,Route} = Ember;

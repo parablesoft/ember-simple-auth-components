@@ -15,47 +15,6 @@ Router.map(function() {
   this.route('admin', function() {
     this.route('settings');
   });
-  this.route('login');
-  this.route('forgot_password');
-  this.route('reset_password', {path: 'reset_password/:token'});
-  this.route('users',function(){
-    this.route('confirmation', {path: 'confirmation/:token_id'});
-  });
-
-  this.route('login');
-  this.route('forgot_password');
-  this.route('reset_password', {path: 'reset_password/:token'});
-  this.route('users',function(){
-    this.route('confirmation', {path: 'confirmation/:token_id'});
-  });
-
-  this.route('login');
-  this.route('forgot_password');
-  this.route('reset_password', {path: 'reset_password/:token'});
-  this.route('users',function(){
-    this.route('confirmation', {path: 'confirmation/:token_id'});
-  });
-
-  this.route('login');
-  this.route('forgot_password');
-  this.route('reset_password', {path: 'reset_password/:token'});
-  this.route('users',function(){
-    this.route('confirmation', {path: 'confirmation/:token_id'});
-  });
-
-  this.route('login');
-  this.route('forgot_password');
-  this.route('reset_password', {path: 'reset_password/:token'});
-  this.route('users',function(){
-    this.route('confirmation', {path: 'confirmation/:token_id'});
-  });
-
-  this.route('login');
-  this.route('forgot_password');
-  this.route('reset_password', {path: 'reset_password/:token'});
-  this.route('users',function(){
-    this.route('confirmation', {path: 'confirmation/:token_id'});
-  });
 
 });
 

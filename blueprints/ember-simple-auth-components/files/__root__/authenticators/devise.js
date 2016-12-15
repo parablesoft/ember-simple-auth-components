@@ -1,5 +1,5 @@
 import DeviseAuthenticator from 'ember-simple-auth/authenticators/devise';
-import Config from "ember-simple-auth/configuration";
+import Config from "ember-simple-auth-components/configuration";
 
 const {get,computed} = Ember;
 export default DeviseAuthenticator.extend({
