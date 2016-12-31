@@ -1,0 +1,20 @@
+<div class="col-md-6">
+  <h4>Change my Password</h4>
+  <form {{action "changePassword" on="submit"}}>
+    <span>To change your password, please fill out the form below:</span>
+    <div class="form-group" style="margin-top:15px;">
+      <label>Current Password</label>
+      {{input type="password" 
+      id="current-password"
+      class="form-control" value=currentPassword placeholder="Current Password"}}
+    </div>
+    <div class="form-group">
+      <label>New Password</label>
+      {{input type="password" class="form-control" value=newPassword placeholder="New Password"}}
+    </div>
+    <div class="text-right">
+      <button 
+	 class="btn btn-primary">Change Password</button>
+    </div>
+  </form>
+</div>
