@@ -5,6 +5,9 @@ let EOL = require('os').EOL;
 const environmentJsRegExFunction = /(\s*function\(.+\) \{[\s\S]+)(\sreturn ENV)/m;
 const routerJsRegExFunction = /(Router\.map\(\s*function\(\) \{[\s\S]*)(\n^\})/m; 
 const routerJsRegExPattern = "$1" + EOL + "  this.route('login');" + EOL +
+  "  this.route('my-account',function(){" + EOL + 
+  "   this.route('change_password');" + EOL + 
+  "  });" + EOL + 
     "  this.route('forgot_password');" + EOL + 
       "  this.route('reset_password', {path: 'reset_password/:token'});" + EOL + 
 	"  this.route('users',function(){" + EOL + 
